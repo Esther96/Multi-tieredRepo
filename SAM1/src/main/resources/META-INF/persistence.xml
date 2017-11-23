@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="MSD">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:/ORCLFeaaMSD</jta-data-source>
+		<class>org.app.service.entities.ChangeRequest</class>
+		<class>org.app.service.entities.Complaint</class>
+		<class>org.app.service.entities.Consultant</class>
+		<class>org.app.service.entities.Customer</class>
+		<class>org.app.service.entities.Employee</class>
+		<class>org.app.service.entities.Feedback</class>
+		<class>org.app.service.entities.FeedbackProgress</class>
+		<class>org.app.service.entities.FeedbackStatus</class>
+		<class>org.app.service.entities.Improvement</class>
+		<class>org.app.service.entities.Requirement</class>
+		<class>org.app.service.entities.Task</class>
+		<class>org.app.service.entities.Team</class>
+		<class>org.app.service.entities.Team_manager</class>
+		<class>org.app.service.entities.Warranty</class>
+		<class>org.app.service.entities.Warranty_issue</class>
+		
+      <properties>
+         <!-- <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>  -->
+         <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+         <property name="hibernate.hbm2ddl.auto" value="update"/>
+      </properties>		
+      		
+	</persistence-unit>
+</persistence>
